@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Seymour One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+    color: #FFF;
+    text-align: center;
+}
+.game {
+    background: #9DCAFF;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    overflow: hidden;
+    position: relative;
+    &__main {
+        display: flex;
+
+    }
+    &__ai-hand {
+        height: 1643px;
+        transform: rotate(50deg);
+        position: absolute;
+        top: -1%;
+        left: -9%;
+        z-index: 0;
+    }
+    &__human-hand {
+        height: 1643px;
+        transform: rotate(-50deg);
+        position: absolute;
+        top: -7%;
+        right: -15%;
+        z-index: 0;
+    }
+    &__result {
+        text-shadow: 4px 4px 0px #000;
+        font-size: 96px;
+        letter-spacing: -9.6px;
+        margin-bottom: 36px;
+        text-transform: uppercase;
+    }
+    &__final {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 126px;
+    }
+    &__next-round, &__restart {
+        color: #000;
+        font-family: 'Shrikhand', sans-serif;
+        font-size: 32px;
+        padding: 8px;
+        border: 2px solid #000;
+        background: #FFF;
+        box-shadow: 4px 4px 0px 0px #000, 4px -7px 0px 0px #C2C2C2 inset;
+        cursor: pointer;
+    }
+    &__next-round {
+        margin-right: 24px;
+    }
+}
+.score {
+    padding-top: 97px;
+    max-width: 582px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    &__number {
+        text-shadow: 4px 4px 0px #000;
+        font-size: 160px;
+    }
+    &__player {
+        text-shadow: 4px 4px 0px #000;
+        font-size: 48px;
+        letter-spacing: -4.8px;
+        margin-top: -23px;
+    }
+}
+.player-choice {
+        margin-bottom: 62px;
+        display: flex;
+        gap: 31px;
+        z-index: 1;
+    &__button {
+        background-color: transparent;
+        border-radius: 50%;
+        border: 0px;
+        cursor: pointer; 
+    }
+}
+.d-none {
+    display:none;
+}
+@media (max-width: 1400px) {
+    .game {
+        &__ai-hand {
+            height: 1200px;
+            top: 15%;
+            left: -9%;
+        }
+        &__human-hand {
+            height: 1200px;
+            top: 15%;
+            right: -15%;
+        }
+    }
+}
+@media (max-width: 1050px) {
+    .game {
+        &__ai-hand {
+            height: 1000px;
+            top: 19%;
+            left: -9%;
+        }
+        &__human-hand {
+            height: 1000px;
+            top: 15%;
+            right: -15%;
+        }
+    }
+}
+@media (max-width: 800px) {
+    .game {
+        &__ai-hand {
+            height: 700px;
+            top: 22%;
+            left: -9%;
+        }
+        &__human-hand {
+            height: 700px;
+            top: 20%;
+            right: -12%;
+        }
+    }
+    .player-choice__button img {
+        height: 170px;
+    }
+}
+@media (max-width: 600px) {
+    .game {
+        &__ai-hand {
+            height: 500px;
+            top: 22%;
+            left: -9%;
+        }
+        &__human-hand {
+            height: 500px;
+            top: 20%;
+            right: -12%;
+        }
+    }
+    .player-choice__button img {
+        height: 100px;
+    }
+    .score {
+        max-width: 300px;
+        padding-top: 60px;
+        &__number {
+            font-size: 100px;
+        }
+        &__player {
+            font-size: 24px;
+        }
+    }
+}
+@media (max-width: 430px) {
+    .game {
+        &__ai-hand {
+            height: 350px;
+            top: 22%;
+            left: -9%;
+        }
+        &__human-hand {
+            height: 350px;
+            top: 20%;
+            right: -12%;
+        }
+    }
+    .player-choice__button img {
+        height: 80px;
+    }
+    .score {
+        padding-top: 40px;
+        max-width: 300px;
+        &__number {
+            font-size: 70px;
+        }
+        &__player {
+            font-size: 16px;
+            margin-top: -10px;
+        }
+    }
+}
