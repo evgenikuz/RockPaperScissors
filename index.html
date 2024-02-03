@@ -7,35 +7,40 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Seymour+One&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Seymour+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="game">
         <div class="game__score score">
             <div class="score__ai">
-                <div class="score__number">0</div>
+                <div class="score__number" id="computer-score">0</div>
                 <div class="score__player">AI</div>
             </div>
             <div class="score__you">
-                <div class="score__number">0</div>
+                <div class="score__number" id="player-score">0</div>
                 <div class="score__player">You</div>
             </div>
         </div>
         <div class="game__main">
-            <img class="game__ai-hand idle" src="./img/ai_hand.png"></img>
-            <img class="game__human-hand idle" src="./img/human_hand.png"></img>
+            <img class="game__ai-hand ai_idle" src="./img/ai_hand.png">
+            <img class="game__ai-hand ai_rock d-none" src="./img/ai-hand-rock.png">
+            <img class="game__ai-hand ai_paper d-none" src="./img/ai-hand-paper.png">
+            <img class="game__ai-hand ai_scissors d-none" src="./img/ai-hand-scissors.png">
+
+            <img class="game__human-hand idle" src="./img/human_hand.png">
             <div class="game__player-choice player-choice">
                 <button class="player-choice__button">
-                    <img class="button__rock" src="./img/buttonRock.png">
+                    <img class="button__rock" src="./img/rock-human.png">
                 </button>
                 <button class="player-choice__button">
-                    <img class="button__paper" src="./img/buttonPaper.png">
+                    <!-- <img class="button__paper" src="./img/buttonPaper.png"> -->
+                    <img class="button__paper" src="./img/paper-human.png">
                 </button>
                 <button class="player-choice__button">
-                    <img class="button__scissors" src="./img/buttonScissors.png">
+                    <img class="button__scissors" src="./img/scissors-human.png">
                 </button>
             </div>
             <div class="game__final d-none">
@@ -46,6 +51,7 @@
                 </div>
             </div>
         </div>
+        <div class="mobile__warning"> Please turn your gadget</div>
     </div>
     <script src="./script.js"></script>
 </body>
