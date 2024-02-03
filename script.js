@@ -79,10 +79,7 @@ let rpsGame = () => {
             playerChoiceBlock.classList.remove('d-none');
 
         })
-        aiIdle.classList.remove('d-none');
-        humanIdle.classList.remove('d-none');
-        showGestureAi(computerGesture); //добавляет d-none
-        showGestureHuman(playerChoice);//добавляет d-none
+
     } else {
         if (comparisonOfGestures(computerGesture, playerChoice) === computerGesture) {
             computerWins++;
@@ -97,20 +94,20 @@ let rpsGame = () => {
 
 let showGestureAi = (gesture) => {
     if (gesture === 'камень') {
-        aiRock.classList.toggle('d-none')
+        aiRock.classList.remove('d-none')
     } else if (gesture === 'ножницы') {
-        aiScissors.classList.toggle('d-none')
+        aiScissors.classList.remove('d-none')
     } else if (gesture === 'бумага') {
-        aiPaper.classList.toggle('d-none')
+        aiPaper.classList.remove('d-none')
     }
 }
 let showGestureHuman = (gesture) => {
     if (gesture === 'камень') {
-        humanRock.classList.toggle('d-none')
+        humanRock.classList.remove('d-none')
     } else if (gesture === 'ножницы') {
-        humanScissors.classList.toggle('d-none')
+        humanScissors.classList.remove('d-none')
     } else if (gesture === 'бумага') {
-        humanPaper.classList.toggle('d-none')
+        humanPaper.classList.remove('d-none')
     }
 }
 
