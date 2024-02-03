@@ -123,6 +123,29 @@
 .d-none {
     display:none;
 }
+.ai-animation {
+    animation: ai-shake 0.5s alternate linear 6;
+}
+.human-animation {
+    animation: human-shake 0.5s alternate linear 6;
+}
+
+@keyframes ai-shake {
+    from {
+        transform: rotate(50deg);
+    }
+    to {
+        transform: rotate(70deg);
+    }
+}
+@keyframes human-shake {
+    from {
+        transform: rotate(-50deg);
+    }
+    to {
+        transform: rotate(-70deg);
+    }
+}
 
 @media (max-width: 1200px) {
     .game {
@@ -132,7 +155,7 @@
         }
         &__human-hand {
             height: calc(var(--index)*38);
-            top: 15%;
+            top: 17%;
         }
         &__result {
             font-size: calc(var(--index)*3);
