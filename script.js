@@ -37,6 +37,7 @@ scissors.addEventListener('click', function() {
 
 });
 let playGame = () => {
+    playerChoiceBlock.classList.add('d-none')
     aiIdle.classList.remove('d-none');
     humanIdle.classList.remove('d-none');
     aiRock.classList.add('d-none')
@@ -47,9 +48,9 @@ let playGame = () => {
     humanScissors.classList.add('d-none')
     aiIdle.classList.add('ai-animation');
     humanIdle.classList.add('human-animation');
-    setTimeout(() => rpsGame(), 3000);
-    setTimeout(() => aiIdle.classList.remove('ai-animation'), 3000);
-    setTimeout(() => humanIdle.classList.remove('human-animation'), 3000);
+    setTimeout(() => rpsGame(), 1500);
+    setTimeout(() => aiIdle.classList.remove('ai-animation'), 1500);
+    setTimeout(() => humanIdle.classList.remove('human-animation'), 1500);
 }
 
 let rpsGame = () => {
@@ -88,6 +89,7 @@ let rpsGame = () => {
             playerWins++;
             player.textContent = playerWins;
         }
+        playerChoiceBlock.classList.remove('d-none')
     }
 
 }

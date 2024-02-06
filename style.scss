@@ -24,26 +24,26 @@
         display: flex;
     }
     &__ai-hand {
-        // height: 1643px;
-        height: calc(var(--index)*55);
+        height: calc(var(--index)*52);
         transform: rotate(50deg);
+        transform-origin: center bottom;
         position: absolute;
-        top: 3%;
-        left: -9%;
+        bottom: -1%;
+        left: -50%;
         z-index: 0;
     }
     &__human-hand {
-        // height: 1643px;
-        height: calc(var(--index)*53);
+        height: calc(var(--index)*49);
         transform: rotate(-50deg);
+        transform-origin: center bottom;
         position: absolute;
-        top: 1%;
-        right: -12%;
+        bottom: 3%;
+        right: -50%;
         z-index: 0;
     }
     &__result {
         text-shadow: 4px 4px 0px #000;
-        font-size: calc(var(--index)*5);
+        font-size: calc(var(--index)*4);
         letter-spacing: -9.6px;
         margin-bottom: 36px;
         text-transform: uppercase;
@@ -124,38 +124,74 @@
     display:none;
 }
 .ai-animation {
-    animation: ai-shake 0.5s alternate linear 6;
+    animation: ai-shake 0.25s alternate linear 6;
 }
 .human-animation {
-    animation: human-shake 0.5s alternate linear 6;
+    animation: human-shake 0.25s alternate linear 6;
 }
 
 @keyframes ai-shake {
     from {
         transform: rotate(50deg);
+        transform-origin: center bottom;
     }
     to {
-        transform: rotate(70deg);
+        transform: rotate(60deg);
+        transform-origin: center bottom;
     }
 }
 @keyframes human-shake {
     from {
         transform: rotate(-50deg);
+        transform-origin: center bottom;
+
     }
     to {
-        transform: rotate(-70deg);
+        transform: rotate(-60deg);
+        transform-origin: center bottom;
+
+    }
+}
+@media (max-height:900px) {
+    .game {
+        &__final {
+            padding-bottom: 15px;
+        }
+    }
+    .score {
+        padding-top: 20px;
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
     .game {
         &__ai-hand {
             height: calc(var(--index)*40);
-            top: 15%;
+            bottom: 20%;
+            left: -40%;
         }
         &__human-hand {
-            height: calc(var(--index)*38);
-            top: 17%;
+            height: calc(var(--index)*37);
+            bottom: 25%;
+            right: -40%;
+        }
+        &__result {
+            font-size: calc(var(--index)*3);
+            letter-spacing: 2px;
+        }
+    }
+}
+@media (max-width: 800px) {
+    .game {
+        &__ai-hand {
+            height: calc(var(--index)*30);
+            bottom: 36%;
+            left: -40%;
+        }
+        &__human-hand {
+            height: calc(var(--index)*27);
+            bottom: 40%;
+            right: -40%;
         }
         &__result {
             font-size: calc(var(--index)*3);
@@ -190,17 +226,16 @@
     }
     .game {
         &__ai-hand {
-            top: 10%;
-            left: -5%;
+            bottom: 0;
+            left: -25%;
         }
         &__human-hand {
-            top: 10%;
-            right: -5%;
+            bottom: 5%;
+            right: -22%;
         }
         &__result {
             font-size: calc(var(--index)*3);
             letter-spacing: 2px;
-            // margin-bottom: 3px;
         }
         &__final{
             padding-bottom: 20px;
